@@ -46,7 +46,8 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 100%;
 }
 
 html, body {
@@ -73,7 +74,7 @@ nav{
 .content-page{
 	/* border: 1px solid red; */
 	width: 878px;
-	margin: auto; 
+	margin: 0 auto; 
 }
 
 .top-content{
@@ -116,4 +117,82 @@ nav{
 footer{
 	text-align: center;
 	 
+}
+
+/* tablet-veiw */
+
+@media (max-width: 800px) {
+	.right {
+		display: none;
+
+	}
+	.nav a {
+		padding: 20px;
+		text-decoration: none;
+	}
+	. nav {
+		margin: 20px;
+	}
+	
+	.getstarted {
+		font-size: 40%;
+	}
+
+	body {
+		margin-right: 20px;
+		margin-left: 5%;
+	}
+	
+	.sup {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		justify-content: space-evenly;
+		width:100%;
+		margin: 0 auto;
+		margin-top: 30px;
+	}
+
+	
+
+}
+
+@media (max-width: 500px) {
+	/* .logo {
+		width: 15%;
+	} */
+	.nav {
+		flex-direction: column;
+		align-items: center;
+	}
+	a {
+		border-bottom: 1px solid gray;
+
+	}
+	.middle-content {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		align-content: center;
+	}
+	.box {
+		margin: 15px 0;
+		 
+	}
+
+
+	.bottom-content {
+		display: flex;
+		flex-direction: column;
+	}
+	.right {
+		width: 20%;
+	}
+
+
+	/* body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}  */
 }
