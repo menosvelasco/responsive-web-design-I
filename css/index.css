@@ -134,6 +134,8 @@ table {
 html,
 body {
   height: 100%;
+  margin: auto;
+  width: 100%;
   font-family: 'Titillium Web', sans-serif;
 }
 
@@ -148,13 +150,22 @@ h5 {
 }
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
+header {
+  display: flex;
+}
+
 nav {
   display: flex;
   justify-content: center;
   justify-content: space-between;
+  width: 80%;
 }
-nav {
+nav a {
   padding: 50px;
+  color: gray;
+}
+.nav .logo {
+  width: 20%;
 }
 
 .content-page {
@@ -212,8 +223,12 @@ footer {
     padding: 20px;
     text-decoration: none;
   }
-  . nav {
+  .nav {
+    display: flex;
     margin: 20px;
+  }
+  .nav .logo {
+    order: -9;
   }
 
   .getstarted {
@@ -224,22 +239,9 @@ footer {
     margin-right: 20px;
     margin-left: 5%;
   }
-
-  .sup {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 30px;
-  }
 }
 
 @media (max-width: 500px) {
-  /* .logo {
-		width: 15%;
-	} */
   .nav {
     flex-direction: column;
     align-items: center;
@@ -264,10 +266,7 @@ footer {
   .right {
     width: 20%;
   }
-
-  /* body {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}  */
+  .nav .logo {
+    order: -6;
+  }
 }
