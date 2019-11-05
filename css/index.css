@@ -186,6 +186,7 @@ nav a {
 }
 .getstarted {
   text-align: center;
+  border: 1px solid gray;
 }
 
 .right {
@@ -242,12 +243,18 @@ footer {
 }
 
 @media (max-width: 500px) {
+  body {
+    width: 95%;
+  }
   .nav {
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    /* border-bottom: 1px solid gray; */
   }
   a {
     border-bottom: 1px solid gray;
+    width: 100%;
   }
   .middle-content {
     display: flex;
