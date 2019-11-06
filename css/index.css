@@ -148,6 +148,10 @@ h5 {
 }
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
+.content-page {
+  width: 878px;
+  margin: 0 auto;
+}
 
 nav {
   display: flex;
@@ -155,15 +159,15 @@ nav {
   justify-content: space-between;
 }
 nav {
-  padding: 50px;
+  padding: 20px;
   color: gray;
 }
-a {
+nav a {
   color: gray;
+  text-decoration: none;
 }
-.content-page {
-  width: 878px;
-  margin: auto;
+.logo {
+  flex-direction: column-reverse;
 }
 
 .top-content {
@@ -210,32 +214,30 @@ footer {
 /* tablet-veiw */
 
 @media (max-width: 800px) {
-  .logo {
+  body {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+  }
+  nav {
     flex-direction: column-reverse;
+  }
+  .nav-container {
+    word-spacing: 37px;
+    padding-top: 5%;
   }
   .right {
     display: none;
   }
-  .nav a {
-    padding: 20px;
-    text-decoration: none;
+  header {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0;
   }
-  .nav {
-    display: flex;
-    margin: 20px;
-  }
-  .nav .logo {
-    order: -9;
-  }
-
   .getstarted {
     font-size: 40%;
   }
-
-  /* body {
-    margin-right: 20px;
-    margin-left: 5%;
-  } */
 }
 
 @media (max-width: 500px) {
@@ -247,7 +249,7 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border-bottom: 1px solid gray;
+    /* border-bottom: 1px solid gray; */
     margin: 2px;
   }
   a {
