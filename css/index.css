@@ -1,3 +1,323 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+.container {
+  width: 878px;
+  margin: 0 auto;
+}
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  color: gray;
+}
+nav a {
+  /* display: flex; */
+  color: gray;
+  text-decoration: none;
+}
+.sub-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.top-content {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 7.5%;
+}
+.headerwithbutton {
+  font-size: 4rem;
+}
+.getstarted {
+  padding: 5% 10%;
+  text-align: center;
+  font-size: 1rem;
+  border: 1px solid gray;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+}
+
+.middle-content {
+  display: flex;
+  margin: 50px 15px;
+}
+.box {
+  margin: 10px;
+}
+
+.bottom-content {
+  display: flex;
+  margin: 50px 15px;
+}
+
+footer {
+  text-align: center;
+  margin: 5%;
+}
+
+/* tablet-veiw */
+
+@media (max-width: 800px) {
+  .container {
+    width: 878px;
+    margin: 0 auto;
+    margin: 0 4% 0 4%;
+  }
+  .navigation {
+    display: flex;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    justify-content: center;
+    word-spacing: 37px;
+    padding-top: 5%;
+    width: 100%;
+  }
+  .sub-nav {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .logo {
+    margin: 0 auto;
+    padding: 10px 7px;
+  }
+  .right {
+    display: none;
+  }
+  .middle-content {
+    display: flex;
+    margin: 50px 15px;
+  }
+  .bottom-content {
+    display: flex;
+    margin: 50px 15px;
+  }
+  .middle-img {
+    width: 95%;
+  }
+  hr {
+    width: 95%;
+  }
+  header {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  .box {
+    margin-right: 15px;
+  }
+
+  .getstarted {
+    font-size: 40%;
+  }
+}
+
+@media (max-width: 500px) {
+  .navigation {
+    display: flex;
+  }
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .sub-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid gray;
+    /* margin-left: 0 40%; */
+  }
+  a {
+    margin: 0 auto;
+    border-bottom: 1px solid gray;
+    line-height: 40px;
+    width: 100%;
+  }
+  .middle-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-content: center;
+  }
+  .box {
+    margin: 15px 0 5%;
+    width: 100%;
+  }
+
+  .bottom-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .right {
+    width: 20%;
+  }
+  .nav .logo {
+    order: -6;
+    width: 45%;
+  }
+}
